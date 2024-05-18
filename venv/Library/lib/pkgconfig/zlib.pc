@@ -1,0 +1,13 @@
+prefix=D:/Dev-work/ChatBot-trained-on-pdfs-/venv/Library
+exec_prefix=D:/Dev-work/ChatBot-trained-on-pdfs-/venv/Library
+libdir=D:/Dev-work/ChatBot-trained-on-pdfs-/venv/Library/lib
+sharedlibdir=D:/Dev-work/ChatBot-trained-on-pdfs-/venv/Library/lib
+includedir=D:/Dev-work/ChatBot-trained-on-pdfs-/venv/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
