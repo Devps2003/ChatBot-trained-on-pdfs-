@@ -42,11 +42,12 @@ def get_vector_store(text_chunks):
     vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
     vector_store.save_local("faiss_index")
 
-
+# If the answer is not available in the context, simply say "The answer is not available in the provided context."
 def get_conversational_chain():
 
     prompt_template = """
-    If the question is related to the provided context, answer it as detailed as possible from the context. If the answer is not available in the context, simply say "The answer is not available in the provided context."
+    If the question is related to the provided context, answer it as detailed as possible from the context.
+    
 
     If the question is not related to the provided context, provide a general answer based on your own knowledge.
     Context:\n {context}\n
