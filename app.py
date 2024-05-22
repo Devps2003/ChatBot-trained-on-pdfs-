@@ -65,11 +65,6 @@ def get_conversational_chain():
 
 def user_input(user_question):
     embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
-    new_db = FAISS.load_local("faiss_index", embeddings, allow_dangerous_deserialization=True)def user_input(user_question):
-    # Initialize the embedding model
-    embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
-
-    # Load the FAISS index
     new_db = FAISS.load_local("faiss_index", embeddings, allow_dangerous_deserialization=True)
 
     # Perform a similarity search using the user's question
